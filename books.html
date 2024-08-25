@@ -24,14 +24,18 @@
       data-header-position="fixed"
     >
       <!-- Sidebar Start -->
-      <aside class="left-sidebar">
+      <aside class="left-sidebar bg-body-secondary">
         <!-- Sidebar scroll-->
         <div>
           <div
             class="brand-logo d-flex align-items-center justify-content-between"
           >
             <a href="./index.html" class="text-nowrap logo-img">
-              <img src="assets/images/logos/dark-logo.svg" width="180" alt="" />
+              <img
+                src="assets/images/logos/study-grid-logo.png"
+                width="180"
+                alt=""
+              />
             </a>
             <div
               class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
@@ -61,18 +65,23 @@
               </li>
               <li class="nav-small-cap">
                 <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                <span class="hide-menu">UI COMPONENTS</span>
+                <span class="hide-menu">Academic Utilities</span>
+              </li>
+
+              <li class="nav-small-cap">
+                <i class="nav-small-cap-icon fs-5"></i>
+                <span class="hide-menu">Library:</span>
               </li>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="./ui-buttons.html"
+                  href="./books.html"
                   aria-expanded="false"
                 >
                   <span>
                     <i class="ti ti-article"></i>
                   </span>
-                  <span class="hide-menu">Buttons</span>
+                  <span class="hide-menu">Books</span>
                 </a>
               </li>
               <li class="sidebar-item">
@@ -243,7 +252,7 @@
                   href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/"
                   target="_blank"
                   class="btn btn-primary"
-                  >Download Free</a
+                  >John Doe</a
                 >
                 <li class="nav-item dropdown">
                   <a
@@ -301,71 +310,81 @@
         </header>
         <!--  Header End -->
         <div class="container-fluid">
-          <div class="container-fluid">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">Buttons</h5>
-                <div class="card">
-                  <div class="card-body p-4">
-                    <button type="button" class="btn btn-primary m-1">
-                      Primary
-                    </button>
-                    <button type="button" class="btn btn-secondary m-1">
-                      Secondary
-                    </button>
-                    <button type="button" class="btn btn-success m-1">
-                      Success
-                    </button>
-                    <button type="button" class="btn btn-danger m-1">
-                      Danger
-                    </button>
-                    <button type="button" class="btn btn-warning m-1">
-                      Warning
-                    </button>
-                    <button type="button" class="btn btn-info m-1">Info</button>
-                    <button type="button" class="btn btn-light m-1">
-                      Light
-                    </button>
-                    <button type="button" class="btn btn-dark m-1">Dark</button>
-                    <button type="button" class="btn btn-link m-1">Link</button>
-                  </div>
-                </div>
-                <h5 class="card-title fw-semibold mb-4">Outline buttons</h5>
-                <div class="card mb-0">
-                  <div class="card-body p-4">
-                    <button type="button" class="btn btn-outline-primary m-1">
-                      Primary
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary m-1">
-                      Secondary
-                    </button>
-                    <button type="button" class="btn btn-outline-success m-1">
-                      Success
-                    </button>
-                    <button type="button" class="btn btn-outline-danger m-1">
-                      Danger
-                    </button>
-                    <button type="button" class="btn btn-outline-warning m-1">
-                      Warning
-                    </button>
-                    <button type="button" class="btn btn-outline-info m-1">
-                      Info
-                    </button>
-                    <button type="button" class="btn btn-outline-light m-1">
-                      Light
-                    </button>
-                    <button type="button" class="btn btn-outline-dark m-1">
-                      Dark
-                    </button>
-                    <button type="button" class="btn btn-outline-link m-1">
-                      Link
-                    </button>
-                  </div>
-                </div>
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Book Tables</h1>
+          <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veritatis minima nemo dolore, 
+            unde deserunt itaque voluptatibus vero ratione, debitis.
+          </p>
+
+          <!-- TABLE FOR UPLOADING BOOKS -->
+          <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">BookTables</h6>
               </div>
-            </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sn</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry the Bird</td>
+                          <td>Mad</td>
+                          <td>@twitter</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                   </tr>
+
+                   <tr>
+                    <th scope="row">7</th>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
           </div>
-        </div>
+
+      </div>
       </div>
     </div>
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
