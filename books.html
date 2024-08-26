@@ -79,9 +79,9 @@
                   aria-expanded="false"
                 >
                   <span>
-                    <i class="ti ti-article"></i>
+                    <i class="ti ti-files"></i>
                   </span>
-                  <span class="hide-menu">Books</span>
+                  <span class="hide-menu">Document</span>
                 </a>
               </li>
               <li class="sidebar-item">
@@ -93,7 +93,7 @@
                   <span>
                     <i class="ti ti-alert-circle"></i>
                   </span>
-                  <span class="hide-menu">Journals</span>
+                  <span class="hide-menu">Media</span>
                 </a>
               </li>
               <li class="sidebar-item">
@@ -311,7 +311,7 @@
         <!--  Header End -->
         <div class="container-fluid">
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Book Tables</h1>
+          <h1 class="h3 mb-2 text-gray-800">Document</h1>
           <p class="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
             veritatis minima nemo dolore, unde deserunt itaque voluptatibus vero
@@ -323,7 +323,9 @@
             <div
               class="card-header py-3 flex-row d-flex align-items-center justify-content-between"
             >
-              <h6 class="m-0 font-weight-bold text-primary">BookTables</h6>
+              <h6 class="m-0 font-weight-bold text-primary">
+                Manage Documents
+              </h6>
               <!-- Button trigger modal -->
               <!-- <button
                 type="button"
@@ -351,11 +353,14 @@
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-lg" role="document">
+                <div
+                  class="modal-dialog modal-dialog-centered modal-lg"
+                  role="document"
+                >
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">
-                        Add Book
+                        Add Document
                       </h5>
                       <button
                         type="button"
@@ -370,7 +375,7 @@
                       <div class="row">
                         <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
-                            >Title</label
+                            >Document Name</label
                           >
                           <input
                             type="text"
@@ -380,7 +385,19 @@
                         </div>
                         <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
-                            >Course code</label
+                            >Document Type</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Eg: pdf"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="mb-3 col">
+                          <label for="exampleInput" class="form-label"
+                            >File Size</label
                           >
                           <input
                             type="text"
@@ -388,9 +405,20 @@
                             placeholder="Eg: John Doe"
                           />
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="mb-3 col">
+                          <label for="exampleInput" class="form-label"
+                            >Visibility</label
+                          >
+                          <select
+                            class="form-control"
+                            id="visibility"
+                            name="visibility"
+                          >
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                          </select>
+                        </div>
+                        <!-- <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
                             >Grade Level</label
                           >
@@ -413,10 +441,10 @@
                             class="form-control"
                             placeholder="Eg: John Doe"
                           />
-                        </div>
+                        </div> -->
                       </div>
                       <div class="row">
-                        <div class="mb-3 col">
+                        <!-- <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
                             >Visibility</label
                           >
@@ -428,7 +456,7 @@
                             <option value="public">Public</option>
                             <option value="private">Private</option>
                           </select>
-                        </div>
+                        </div> -->
                         <!-- <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
                             >Book Cover</label
@@ -442,7 +470,7 @@
                           <input type="file" class="form-control" />
                         </div>
                       </div>
-                      <div class="row">
+                      <!-- <div class="row">
                         <div class="mb-3 col">
                           <label for="exampleInput" class="form-label"
                             >Description</label
@@ -452,7 +480,7 @@
                             id="message-text"
                           ></textarea>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="modal-footer">
                       <!-- <button
