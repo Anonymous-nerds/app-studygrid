@@ -23,17 +23,17 @@
     }
 
 
-    .profile-card {
+    /* .profile-card {
       width: 75%;
-      background-color: white;
+      background-color: rgb(77, 118, 151);
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       position: relative;
-    }
+    } */
     .profile-card {
-      width: 75%;
-      background-color: white;
+      width: 70%;
+      background-color: #f2f4f5;
       text-align: start;
       padding: 40px 58px;
       border-radius: 30px;
@@ -56,7 +56,7 @@
     .header h2{
         font-size: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        padding: 15px;
+        padding: 13px;
     }
 
     .profile-pic {
@@ -137,6 +137,10 @@
       border: none;
       cursor: pointer;
       border-radius: 5px;
+    }
+
+    .remove-btn{
+        padding: 5px;
     }
 
     .edit-btn {
@@ -224,6 +228,9 @@
       <div class="edit-section">
         <!-- Change Profile Picture Button -->
         <button class="change-pic-btn" onclick="changeProfilePicture()">Change Profile Picture</button>
+        <!-- Add a small button to remove the profile picture -->
+    <button class="btn remove-btn" type="button" onclick="removeProfilePicture()">Remove Picture</button>
+
         <input type="file" id="uploadProfilePic" style="display:none" onchange="previewImage(event)">
         <input type="text" id="fullName" class="input-field" placeholder="Full Name">
         <input type="email" id="email" class="input-field" placeholder="Email">
@@ -257,6 +264,13 @@
       document.getElementById('nationality').value = document.getElementById('nationalityDisplay').value;
       document.getElementById('educationLevel').value = document.getElementById('educationLevelDisplay').value;
     }
+
+    function removeProfilePicture() {
+  // Set the profile image to a default picture or an empty state
+  document.getElementById('profileImage').src = 'user-1.jpg'; // Use a path to your default profile image
+  // Clear the local storage value for the profile picture
+  localStorage.removeItem('profilePicture');
+}
 
     function saveChanges() {
       // Get the values from the input fields
@@ -317,7 +331,7 @@
     function logout() {
       // Simulate logging out
       alert('You have been logged out.');
-      window.location.href = '/login.html'; // Redirect to the login page after logout
+      window.location.href = '/authentication-register.html'; // Redirect to the login page after logout
     }
 
     function changeProfilePicture() {
@@ -355,8 +369,10 @@
       }
 
       if (storedProfilePicture) {
-        document.getElementById('profileImage').src = storedProfilePicture;
-      }
+    document.getElementById('profileImage').src = storedProfilePicture;
+  } else {
+    document.getElementById('profileImage').src = 'user-1.jpg'; // Fallback to a default image if none is stored
+  }
     }
 
     // Load profile data when the page loads
