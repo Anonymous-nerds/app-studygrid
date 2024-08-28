@@ -1,0 +1,360 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="profile-card">
+    <div class="profile-header">
+      <img id="profile-pic" src="default-avatar.png" alt="Profile Picture" class="profile-picture">
+      <input type="file" id="profile-pic-input" accept="image/*" style="display: none;">
+      <button id="edit-btn">Edit</button>
+      <button id="save-btn" style="display: none;">Save Changes</button>
+    </div>
+    <div class="profile-details">
+      <div class="detail-item">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" value="John Doe" disabled>
+      </div>
+      <div class="detail-item">
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="john.doe@example.com" disabled>
+      </div>
+      <div class="detail-item">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" disabled>Hi, I'm John Doe, a passionate developer.</textarea>
+      </div>
+      <div class="detail-item">
+        <label for="course-of-study">Course of Study:</label>
+        <input type="text" id="course-of-study" value="Computer Science" disabled>
+      </div>
+      <div class="detail-item">
+        <label for="social-media">Social Media:</label>
+        <input type="text" id="social-media" value="@johndoe" disabled>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <script src="https://kit.fontawesome.com/eee1a8ddfd.js" crossorigin="anonymous"></script>
+  <style>
+    /* Styles for the profile card */
+    body {
+      font-family: Arial, sans-serif, 'poppins';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* background-color: #f0f0f0; */
+      background-image:linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)), url('profbgd.jpg');
+      background-position: center;
+      background-size: cover;
+      margin: 20px;
+    
+    }
+
+    .profile-card {
+      width: 70%;
+      background-color: white;
+      text-align: center;
+      padding: 40px 58px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color:#107BE9;
+      color: white;
+      padding: 1px;
+      text-align: center;
+      margin-left: -90px;
+      margin-right: -90px;
+    }
+
+    .profile-pic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      position: relative;
+      
+    }
+
+    .profile-pic img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #092652;
+      padding: 6px;
+    }
+
+    .change-pic-btn {
+      margin-top: 10px;
+      background-color:#092652;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      box-shadow: #107BE9;
+      border-radius: 5px;
+    }
+
+    .change-pic-btn:hover {
+      background-color: #107BE9;
+    }
+
+    .logout-btn,
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color:#092652;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .back-btn {
+      right: 100px;
+    }
+
+    .logout-btn:hover,
+    .back-btn:hover {
+      background-color: #314d7e;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .edit-section {
+      display: none;
+    }
+
+    .input-field {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: calc(100% - 22px);
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .edit-btn {
+      background-color:#107BE9;
+      color: white;
+      border-radius: 8px;
+      margin: 50px;
+    }
+
+    .save-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .cancel-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .edit-btn:hover,
+    .save-btn:hover,
+    .cancel-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-card">
+    <div class="header">
+      <h2>My Profile</h2>
+      <!-- Back and Logout buttons -->
+      <button class="back-btn" onclick="goBack()">Back</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="profile-pic">
+      <img src="user-1.jpg" alt="Profile Picture" id="profileImage">
+         </div>
+         <hr>
+    <div class="content">
+      <div class="view-section">
+        <h3 id="fullNameDisplay">John Doe</h3>
+        <p id="emailDisplay">johndoe@example.com</p>
+        <p id="bioDisplay">Bio goes here...</p>
+        <p id="courseDisplay">Computer Science</p>
+        <p id="socialMediaDisplay">Facebook: @johndoe</p>
+        <!-- <div class="profile-details">
+          <div class="detail-item">
+            <label for="full-name" id="fullName">Full Name:</label>
+            <input type="text" id="fullName" value="John Doe" disabled>
+          </div>
+          <div class="detail-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="john.doe@example.com" disabled>
+          </div>
+          <div class="detail-item">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" disabled cols="40" rows="7">Hi, I'm John Doe, a passionate developer.</textarea>
+          </div>
+          <div class="detail-item">
+            <label for="course-of-study">Course of Study:</label>
+            <input type="text" id="course-of-study" value="Computer Science" disabled>
+          </div> 
+          <hr>
+          <p>Social Media Handles (optional):</p>
+          <div class="detail-item">
+          
+            <label for="social-media">  <a href=""><i class="fa-brands fa-instagram"></i></a>:</label>
+            <input type="text" id="social-media" value="@johndoe" disabled>
+          </div>
+          <div class="detail-item">
+            <label for="social-media"><a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </label>
+            <input type="text" id="social-media" value="@johndoe" disabled>
+          </div>
+          <div class="detail-item">
+            <label for="social-media"><i class="fa-brands fa-facebook"></i>:</label>
+            <input type="text" id="social-media" value="@johndoe" disabled>
+          </div>
+          <div class="detail-item">
+            <label for="social-media"><i class="fa-brands fa-linkedin"></i>:</label>
+            <input type="text" id="social-media" value="@johndoe" disabled>
+          </div>
+
+        </div> -->
+        <button class="btn edit-btn" onclick="editProfile()">Edit Profile</button>
+      </div>
+
+      <div class="edit-section">
+        <button class="change-pic-btn" onclick="changeProfilePicture()">Change Profile Picture</button>
+
+        <input type="file" id="uploadProfilePic" style="display:none" onchange="previewImage(event)">
+        <input type="text" id="fullName" class="input-field" placeholder="Full Name">
+        <input type="email" id="email" class="input-field" placeholder="Email">
+        <textarea id="bio" class="input-field" placeholder="Bio">bio goes</textarea>
+        <input type="text" id="course" class="input-field" placeholder="Course of Study">
+        <input type="text" id="socialMedia" class="input-field" placeholder="Social Media Handles" value="Facebook:@john doe">
+        <button class="btn save-btn" onclick="saveChanges()">Save Changes</button>
+        <button class="btn cancel-btn" onclick="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript Functions
+
+    function editProfile() {
+      document.querySelector('.view-section').style.display = 'none';
+      document.querySelector('.edit-section').style.display = 'block';
+    
+
+  
+
+    //   document.getElementById('fullNameDisplay').textContent = fullName;
+    //   document.getElementById('emailDisplay').textContent = email;
+    //   document.getElementById('bioDisplay').textContent = bio;
+    //   document.getElementById('courseDisplay').textContent = course;
+    //   document.getElementById('socialMediaDisplay').textContent = socialMedia;
+
+      // Populate edit inputs with current profile data
+    document.getElementById('fullName').value = document.getElementById('fullNameDisplay').textContent;
+    document.getElementById('email').value = document.getElementById('emailDisplay').textContent;
+    document.getElementById('bio').value = document.getElementById('bioDisplay').textContent;
+    document.getElementById('course').value = document.getElementById('courseDisplay').textContent;
+    document.getElementById('socialMedia').value = document.getElementById('socialMediaDisplay').textContent;
+} 
+     function saveChanges() {
+    // Get the values from the input fields
+    var fullName = document.getElementById('fullName').value;
+    var email = document.getElementById('email').value;
+    var bio = document.getElementById('bio').value;
+    var course = document.getElementById('course').value;
+    var socialMedia = document.getElementById('socialMedia').value;
+
+    // Check if all fields have values
+    if (fullName && email && bio && course && socialMedia) {
+        // Update the profile display section with the new values
+        document.getElementById('fullNameDisplay').textContent = fullName;
+        document.getElementById('emailDisplay').textContent = email;
+        document.getElementById('bioDisplay').textContent = bio;
+        document.getElementById('courseDisplay').textContent = course;
+        document.getElementById('socialMediaDisplay').textContent = socialMedia;
+
+        // Hide the edit section and show the view section
+        document.querySelector('.edit-section').style.display = 'none';
+        document.querySelector('.view-section').style.display = 'block';
+    } else {
+        alert('Please fill in all fields.');
+    
+}
+      // var fullName = document.getElementById('fullName').value;
+      // var email = document.getElementById('email').value;
+      // var bio = document.getElementById('bio').value;
+      // var course = document.getElementById('course').value;
+      // var socialMedia = document.getElementById('socialMedia').value;
+
+      document.querySelector('.edit-section').style.display = 'none';
+      document.querySelector('.view-section').style.display = 'block';
+    }
+
+    function cancelEdit() {
+      document.querySelector('.edit-section').style.display = 'none';
+      document.querySelector('.view-section').style.display = 'block';
+    }
+
+    function goBack() {
+      // Add logic to go back to the previous page or close the profile card
+      alert('Back button clicked');
+    }
+
+    function logout() {
+      // Add logic for logging out
+      alert('Logout button clicked');
+    }
+
+    function changeProfilePicture() {
+      document.getElementById('uploadProfilePic').click();
+    }
+
+    function previewImage(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('profileImage');
+        output.src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</body>
+
+</html>
