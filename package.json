@@ -1,0 +1,12 @@
+{
+  "name": "app-studygrid",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "```markdown\r # Collaborative Study Hubs Platform - Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
