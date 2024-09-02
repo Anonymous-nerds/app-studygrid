@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Profile ~Study Grid</title>
+    <title>Profile ~ Study Grid</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -17,6 +17,91 @@
     <link rel="stylesheet" type="text/css" href="font.css" />
   </head>
   <body>
+
+               <!-- Modal -->
+               <div
+               class="modal fade"
+               id="exampleModal"
+               tabindex="-1"
+               role="dialog"
+               aria-labelledby="exampleModalLabel"
+               aria-hidden="true"
+             >
+               <div
+                 class="modal-dialog modal-dialog-centered modal-lg"
+                 role="document"
+               >
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">
+                       Edit Profile
+                     </h5>
+                     <button
+                       type="button"
+                       class="close"
+                       data-dismiss="modal"
+                       aria-label="Close"
+                     >
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+                   <!-- user profile image end -->
+
+                   <!-- User Info start -->
+                   <div class="mt-5">
+                    <!-- name & username  -->
+                    <div class="row">
+                      <!-- name -->
+                      <div class="col-sm">
+                        <label for="" class="">Name :</label>
+                        <input class="form-control mt-2 fw-semibold" />
+                      </div>
+                      <!-- username -->
+                      <div class="col-sm">
+                        <label for="" class="">Username :</label>
+                        <p class="form-control mt-2 fw-semibold">anasyakubu</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <!-- emaill & phone  -->
+                    <div class="row">
+                      <!-- email -->
+                      <div class="col-sm">
+                        <label for="" class="">Email :</label>
+                        <p class="form-control mt-2 fw-semibold">yakubuanas04@gmail.com</p>
+                      </div>
+                      <!-- phone -->
+                      <div class="col-sm">
+                        <label for="" class="">Phone :</label>
+                        <p class="form-control mt-2 fw-semibold">+2229009999999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BIO -->
+                  <div class="mt-3">
+                    <label for="">Bio :</label>
+                    <textarea class="form-control fw-semibold" name="" id="" readonly>This is my Bio</textarea>
+                  </div>
+                  <!-- User Info end -->
+                       
+                   </div>
+                   <div class="modal-footer">
+                     <!-- <button
+                       type="button"
+                       class="btn btn-secondary"
+                       data-dismiss="modal"
+                     >
+                       Close
+                     </button> -->
+                     <button type="button" class="btn btn-primary">Add</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
     <!--  Body Wrapper -->
     <div
       class="page-wrapper"
@@ -35,68 +120,61 @@
         <!--  Header Start -->
         <header class="app-header renderNavbarDiv"></header>
         <!--  Header End -->
-        <div class="container-fluid">
-          <div class="container-fluid">
+        <div class="container-fluid ">
+          <div class="">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4">Forms</h5>
                 <div class="card">
                   <div class="card-body">
-                    <form>
-                      <div
-                        class="d-flex flex-column align-items-center justify-content-center"
-                        style="max-width: 400px; margin: 0 auto"
-                      >
-                        <img
-                          src="assets/images/profile/user-1.jpg"
-                          class="rounded-circle"
-                          width="70"
-                          height="70"
-                        /><br /><br />
-                        <label for="exampleInput" class="form-label"
-                          >Profile Picture</label
-                        >
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"
-                          >Email address</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                        />
-                        <div id="emailHelp" class="form-text">
-                          We'll never share your email with anyone else.
+                    <!-- user profile image start -->
+                   <div class="d-flex justify-content-center">
+                    <img src="assets/images/profile/user-1.jpg" class="rounded-circle" width="90" height="90" alt="">
+                   </div>
+                   <!-- user profile image end -->
+
+                   <!-- User Info start -->
+                    <div class="mt-5">
+                      <!-- name & username  -->
+                      <div class="row">
+                        <!-- name -->
+                        <div class="col-sm">
+                          <label for="" class="">Name :</label>
+                          <p class="form-control mt-2 fw-semibold">Anas Yakubu</p>
+                        </div>
+                        <!-- username -->
+                        <div class="col-sm">
+                          <label for="" class="">Username :</label>
+                          <p class="form-control mt-2 fw-semibold">anasyakubu</p>
                         </div>
                       </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"
-                          >Password</label
-                        >
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="exampleInputPassword1"
-                        />
+                    </div>
+                    <div class="mt-3">
+                      <!-- emaill & phone  -->
+                      <div class="row">
+                        <!-- email -->
+                        <div class="col-sm">
+                          <label for="" class="">Email :</label>
+                          <p class="form-control mt-2 fw-semibold">yakubuanas04@gmail.com</p>
+                        </div>
+                        <!-- phone -->
+                        <div class="col-sm">
+                          <label for="" class="">Phone :</label>
+                          <p class="form-control mt-2 fw-semibold">+2229009999999</p>
+                        </div>
                       </div>
-                      <div class="mb-3 form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="exampleCheck1"
-                        />
-                        <label class="form-check-label" for="exampleCheck1"
-                          >Check me out</label
-                        >
-                      </div>
-                      <button type="submit" class="btn btn-primary">
-                        Submit
-                      </button>
-                    </form>
-                  </div>
-                </div>
+                    </div>
+                    <!-- BIO -->
+                    <div class="mt-3">
+                      <label for="">Bio :</label>
+                      <textarea class="form-control fw-semibold" name="" id="" readonly>This is my Bio</textarea>
+                    </div>
+                    <!-- User Info end -->
+                     <!-- Button -->
+                    <div class="mt-3">
+                      <button class="btn btn-primary" data-toggle="modal"
+                      data-target="#exampleModal">Update Profile</button>
+                    </div>
               </div>
             </div>
           </div>
@@ -115,5 +193,20 @@
     <script type="text/javascript">
       dashBoardJS();
     </script>
+       <script
+       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+       crossorigin="anonymous"
+     ></script>
+     <script
+       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+       crossorigin="anonymous"
+     ></script>
+     <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+       crossorigin="anonymous"
+     ></script>
   </body>
 </html>
