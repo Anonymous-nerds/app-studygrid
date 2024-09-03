@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Grid</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/logos/Cop.png"
+    />
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+  </head>
+
+  <body>
+    <!--  Body Wrapper -->
+    <div
+      class="page-wrapper"
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin6"
+      data-sidebartype="full"
+      data-sidebar-position="fixed"
+      data-header-position="fixed"
+    >
+      <!-- Sidebar Start -->
+      <aside class="left-sidebar bg-body-secondary renderSidebarDiv">
+
+      </aside>
+      <!--  Sidebar End -->
+      <!--  Main wrapper -->
+      <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header renderNavbarDiv">
+        </header>
+        <!--  Header End -->
+        <div class="container-fluid">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title fw-semibold mb-4">Media</h5> 
+                <div class="container-fluid">
+                  <!-- Page Heading -->
+                 <!-- <h1 class="h3 mb-2 text-gray-800">Document</h1>
+                  <p class="mb-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+                    veritatis minima nemo dolore, unde deserunt itaque voluptatibus vero
+                    ratione, debitis.
+                  </p>-->
+        
+                  <!-- TABLE FOR UPLOADING BOOKS -->
+                  <div class="doc_content">
+                    <div class="card shadow mb-4" style="height:100%; width:100%;">
+                      <div
+                        class="card-header py-3 flex-row d-flex align-items-center justify-content-between"
+                      >
+                       <div class="tableText">
+                         <p>Manage Documents</p>
+                         <button id="searchBtn">
+                           <p>Search</p>
+                           <i class="fad fa-magnifying-glass"></i>
+                         </button>
+                       </div>
+                        <!-- Button trigger modal -->
+                        <!-- <button
+                          type="button"
+                          class="btn btn-success"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        >
+                          add+
+                        </button> -->
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-lg rounded-circle position-fixed"
+                          style="width: 60px; height: 60px; bottom: 20px; right: 20px"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        >
+                          <i class="ti ti-plus"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div
+                          class="modal fade"
+                          id="exampleModal"
+                          tabindex="-1"
+                          role="dialog"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="modal-dialog modal-dialog-centered modal-lg"
+                            role="document"
+                          >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Add Document
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="close"
+                                  data-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row">
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Document Name</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Eg: CSC1311"
+                                    />
+                                  </div>
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Document Type</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Eg: pdf"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >File Size</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Eg: John Doe"
+                                    />
+                                  </div>
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Visibility</label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      id="visibility"
+                                      name="visibility"
+                                    >
+                                      <option value="public">Public</option>
+                                      <option value="private">Private</option>
+                                    </select>
+                                  </div>
+                                  <!-- <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Grade Level</label
+                                    >
+                                    <select class="form-control">
+                                      <option value="" disabled selected>
+                                        Select grade level
+                                      </option>
+                                      <option value="Elementary">Elementary</option>
+                                      <option value="Middle School">Middle School</option>
+                                      <option value="High School">High School</option>
+                                      <option value="College">College</option>
+                                    </select>
+                                  </div>
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Number of Pages</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Eg: John Doe"
+                                    />
+                                  </div> -->
+                                </div>
+                                <div class="row">
+                                  <!-- <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Visibility</label
+                                    >
+                                    <select
+                                      class="form-control"
+                                      id="visibility"
+                                      name="visibility"
+                                    >
+                                      <option value="public">Public</option>
+                                      <option value="private">Private</option>
+                                    </select>
+                                  </div> -->
+                                  <!-- <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Book Cover</label
+                                    >
+                                    <input type="file" class="form-control" />
+                                  </div> -->
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Upload Book</label
+                                    >
+                                    <input type="file" class="form-control" />
+                                  </div>
+                                </div>
+                                <!-- <div class="row">
+                                  <div class="mb-3 col">
+                                    <label for="exampleInput" class="form-label"
+                                      >Description</label
+                                    >
+                                    <textarea
+                                      class="form-control"
+                                      id="message-text"
+                                    ></textarea>
+                                  </div>
+                                </div> -->
+                              </div>
+                              <div class="modal-footer">
+                                <!-- <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-dismiss="modal"
+                                >
+                                  Close
+                                </button> -->
+                                <button type="button" class="btn btn-primary">Add</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Sn</th>
+                                <th scope="col">Doc Name</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td id="col2_1">Mark</td>
+                                <td id="col3_1">Otto</td>
+                                <td id="col4_1">@mdo</td>
+                                <td id="col5_1">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td id="col2_2">Jacob</td>
+                                <td id="col3_2">Thornton</td>
+                                <td id="col4_2">@fat</td>
+                                <td id="col5_2">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td id="col2_3">Larry the Bird</td>
+                                <td id="col3_3">Mad</td>
+                                <td id="col4_3">@twitter</td>
+                                <td id="col5_3">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td id="col2_4">System Architect</td>
+                                <td id="col3_4">Edinburgh</td>
+                                <td id="col4_4">61</td>
+                                <td id="col5_4">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td id="col2_5">System Architect</td>
+                                <td id="col3_5">Edinburgh</td>
+                                <td id="col4_5">61</td>
+                                <td id="col5_5">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+        
+                              <tr>
+                                <th scope="row">6</th>
+                                <td id="col2_6">Junior Technical Author</td>
+                                <td id="col3_6">San Francisco</td>
+                                <td id="col4_6">66</td>
+                                <td id="col5_6">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+        
+                              <tr>
+                                <th scope="row">7</th>
+                                <td id="col2_7">Senior Javascript Developer</td>
+                                <td id="col3_7">Edinburgh</td>
+                                <td id="col4_7">22</td>
+                                <td id="col5_7">hhh</td>
+                                <td>
+                                  <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download"
+                                  >
+                                    <i class="ti ti-download"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-secondary"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preview"
+                                  >
+                                    <i class="ti ti-eye"></i>
+                                  </button>
+                                  <button
+                                    class="btn btn-sm btn-danger"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Delete"
+                                  >
+                                    <i class="ti ti-trash"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                   <div class="searchModel">
+                      <div class="modelHead">
+                        <i class="fad fa-magnifying-glass"></i>
+                        <input type="text" name="search" placeholder="Search. . ." id="searchInput">
+                      </div>
+                      <div class="modelCont">
+                        <div class="pointCont">
+                          <span class="catPoint active">
+                            <p>Doc Name</p>
+                          </span>
+                          <span class="catPoint">
+                            <p>Type</p>
+                          </span>
+                          <span class="catPoint">
+                            <p>Size</p>
+                          </span>
+                          <span class="catPoint">
+                            <p>Category</p>
+                          </span>
+                        </div>
+                        <div class="searchResult">
+                         <!--  <span class="colData">
+                            <span>
+                              <i class="fad fa-memo-pad"></i>
+                              <p>Mark</p>
+                            </span>
+                            <span>
+                              <i class="fas fa-ellipsis-vertical"></i>
+                            </span>
+                          </span> -->
+                        </div> -->
+                      </div>
+                   </div>
+                  </div>
+                  <!-- <button
+                    type="button"
+                    class="btn btn-primary btn-lg rounded-circle position-fixed"
+                    style="width: 60px; height: 60px; bottom: 20px; right: 20px"
+                  >
+                    <i class="ti ti-plus"></i>
+                  </button> -->
+                </div>
+                
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/sidebarmenu.js"></script>
+    <script src="assets/js/staticNavbar.js"></script>
+    <script src="assets/js/staticSidebar.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/libs/simplebar/dist/simplebar.js"></script>
+  </body>
+</html>
