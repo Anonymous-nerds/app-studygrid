@@ -54,7 +54,7 @@ const renderNavbar = `
                   >
                     <div class="message-body">
                       <a
-                        href="profile/profile.html"
+                        href="profile.html"
                         class="d-flex align-items-center gap-2 dropdown-item"
                       >
                         <i class="ti ti-user fs-6"></i>
