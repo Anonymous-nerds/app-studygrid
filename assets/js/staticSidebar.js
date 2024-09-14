@@ -64,7 +64,7 @@ const renderSidebar = `<div>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="./ui-alerts.html"
+                  href="./media.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -73,18 +73,7 @@ const renderSidebar = `<div>
                   <span class="hide-menu">Media</span>
                 </a>
               </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link"
-                  href="./ui-card.html"
-                  aria-expanded="false"
-                >
-                  <span>
-                    <i class="ti ti-cards"></i>
-                  </span>
-                  <span class="hide-menu">Open library</span>
-                </a>
-              </li>
+             
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
@@ -137,34 +126,7 @@ const renderSidebar = `<div>
                   <span class="hide-menu">Register</span>
                 </a>
               </li>
-              <li class="nav-small-cap">
-                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                <span class="hide-menu">EXTRA</span>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link"
-                  href="./icon-tabler.html"
-                  aria-expanded="false"
-                >
-                  <span>
-                    <i class="ti ti-mood-happy"></i>
-                  </span>
-                  <span class="hide-menu">Icons</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link"
-                  href="./sample-page.html"
-                  aria-expanded="false"
-                >
-                  <span>
-                    <i class="ti ti-aperture"></i>
-                  </span>
-                  <span class="hide-menu">Sample Page</span>
-                </a>
-              </li>
+             
             </ul>
             <div
               class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded"
