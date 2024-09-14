@@ -88,13 +88,13 @@ const renderSidebar = `<div>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="./ui-forms.html"
+                  href="group.html"
                   aria-expanded="false"
                 >
                   <span>
                     <i class="ti ti-file-description"></i>
                   </span>
-                  <span class="hide-menu">Forms</span>
+                  <span class="hide-menu">Group</span>
                 </a>
               </li>
               <li class="sidebar-item">
